@@ -1,0 +1,11 @@
+# Handle line endings automatically for files detected as text 
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Unix Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Windows Scripts
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
