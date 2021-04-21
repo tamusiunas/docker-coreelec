@@ -9,21 +9,31 @@ Generally boxes sold with the Amlogic processors line have reasonably high memor
 
 This project provides structure to install the Docker version 20.10, latest (fetched directly from Github), on these devices.
 
-Compilation instructions
-To compile the system it is necessary to do it on some platform with Docker already installed. If it is a platform with a different architecture than the existing one, you can use cross-compiling (buildx).
+Compilation instructions (Linux X86_64/arm64 and macOS)
+Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).
 
 First step: know the device architecture with CoreELEC
 - Enable ssh via Kodi / CoreELEC interface on the device
 - Access the device via SSH
 - Look for the architecture with the uname command:
+
 ```bash
 # uname -m
 ```
 
 Output table
+
 Output contains |Architecture is
 ------|------------
 aarch64|arm64
 arm7   |arm7
 arm6   |arm6
 
+To compile for the same platform
+
+```bash
+./compile
+```
+
+
+To compile on different platform

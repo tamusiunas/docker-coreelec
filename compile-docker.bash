@@ -58,7 +58,7 @@ case "$subcommand" in
   build )
     BUILD_METHOD="build"
     if [ "$ARCH" == "" ]; then
-      echo "Your architecture is not compatible. Try to use \"$0 buildx\" instead \"$0 build\""
+      echo "Your architecture is not compatible. Try using \"$0 buildx\" instead \"$0 build\""
       exit 1
     fi
     ;;
