@@ -117,6 +117,10 @@ case "$subcommand" in
     exit 1
     ;;
 esac
+if [ "$ARCH" == "" ]; then
+  print_error_arg_buildx
+  exit 1
+fi
 echo "BUILD_METHOD: $BUILD_METHOD"
 echo "ARCH: $ARCH"
 echo "BUILDX_SUFFIX: $BUILDX_SUFFIX"
