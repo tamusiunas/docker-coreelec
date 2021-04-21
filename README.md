@@ -12,7 +12,7 @@ This project provides structure to install the Docker version 20.10, latest (fet
 ##Compilation instructions (Linux X86_64/arm64 and macOS)
 **Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).**
 
-First step: know the device architecture with CoreELEC
+###First step: know the device architecture with CoreELEC
 - Enable ssh via Kodi / CoreELEC interface on the device
 - Access the device via SSH
 - Look for the architecture with the uname command:
@@ -29,7 +29,7 @@ aarch64|arm64
 arm7   |arm7
 arm6   |arm6
 
-Second step: compile it on a platform with docker installed and running
+###Second step: compile it on a platform with docker installed and running
 
 To compile for the same platform
 
@@ -41,8 +41,35 @@ To compile on different platform (<arch> is the architecture: arm64, arm7 or arm
 
 ```bash
 ./compile-docker.bash buidx -a <arch>
+# example: ./compile-docker.bash buidx -a arm64
 ```
 
 **Depending on your system performance the compilation can take up to 30 minutes.**
 
-It will generate a file 
+When finished a file (.tar.gz) starting with **docker_v20.10** identified by architecture and date will be available locally. Use it to install Docker on CoreELEC.
+
+##Installing Docker on CoreELEC 
+
+To install it you have to use the download file from [releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases).
+
+Considering you are using the file name "docker_v20.10.6.m_coreelec_arm64.tar.gz":
+
+- Send the file "docker_v20.10.6.m_coreelec_arm64.tar.gz" to device.
+- Access the device via SSH.
+
+```bash
+cd /
+# considering you file is on /storage
+tar zxvf /storage/docker_v20.10.6.m_coreelec_arm64.tar.gz
+systemctl daemon-reload
+systemctl start service.system.docker
+# if you wanna have docker commands on PATH (recommended)
+echo "export PATH=/storage/.docker/bin:$PATH" >> /storage/.profile
+```
+
+All docker executable files are at "/storage/.docker/bin". 
+
+The daemon.config file is at "/storage/.config/docker/daemon.json"
+
+The data-root directory is "/storage/.docker/data-root"
+
