@@ -134,8 +134,7 @@ fi
 # Preparing environment
 #
 rm -rf ./build_tmp && rm -f ./storage/.docker/bin/* && rm -f ./storage/.docker/cli-plugins/* && mkdir build_tmp
-
-
+mkdir -p storage/.docker/bin storage/.docker/cli-plugins
 
 #
 # Download from github

@@ -1,5 +1,5 @@
 .DS_Store
 docker_*.gz
 build_tmp/
-storage/.docker/bin/*
-storage/.docker/cli-plugins/*
+storage/.docker/bin/
+storage/.docker/cli-plugins/
