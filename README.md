@@ -9,6 +9,10 @@ Generally boxes sold with the Amlogic processors line have reasonably high memor
 
 This project provides structure to install the Docker version 20.10, latest (fetched directly from Github), on these devices.
 
+## Download releases
+
+[Download releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases)
+
 ## Compilation instructions (Linux X86_64/arm64 and macOS)
 **Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).**
 
