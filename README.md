@@ -1,11 +1,11 @@
 # docker-coreelec
 Docker 20.10 for CoreELEC distro
 
-CoreELEC is a Linux system (JeOS - Just enough Operational system) that works on devices with Amlogic processors. It has the minimum required to run the Kodi system. Some of its advantages is that it uses the original Amlogic Kernel for Android (4.9.113) and has support for almost all device embedded (Bluetooth, WiFi, Ethernet, Audio and Video Output, Hardware Video Decoding) using the original Android structure while other Linux distributions often do not support all installed devices.
+CoreELEC is a Linux system (JeOS - Just enough Operational System) that runs on devices with Amlogic processors. It has the minimum required to run the Kodi system and uses the original Amlogic Kernel for Android (4.9.113) having support for almost all devices embedded (Bluetooth, WiFi, Ethernet, Audio and Video Output, Hardware Video Decoding) using the original Android structure while other Linux distributions often do not support all installed devices.
 
-Usually new software are installed through add-on using the interface itself (Kodi), where the software is usually aimed for multimedia activities. One exception is the system-oriented software Docker, however it is limited to version 19.
+Usually new software is installed through add-on using the GUI interface (Kodi), where the software is usually aimed for multimedia activities. One exception is the system-oriented software Docker, however it is limited to version 19.
 
-Generally boxes sold with the Amlogic processors line have reasonably high memory for this type of system (4/8 GB) and multi-core processor with a very attractive price. The possibility of using a docker, especially the latest versions with security fixes, can make this type of equipment very efficient for various domestic applications, such as servers for IoT.
+Generally boxes sold with the Amlogic processors line have reasonably high memory for this type of system (4/8 GB) and multi-core processor with a very attractive price. The possibility of using a docker, especially the latest versions with security fixes, can make this type of equipment very efficient for a lot of domestic applications, such as servers for IoT.
 
 This project provides structure to install the Docker version 20.10, latest (fetched directly from Github), on these devices.
 
