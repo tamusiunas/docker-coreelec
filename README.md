@@ -48,18 +48,20 @@ To compile on different platform (<arch> is the architecture: arm64, arm7 or arm
 
 When finished a file (.tar.gz) starting with **docker_v20.10** identified by architecture and date will be available locally. Use it to install Docker on CoreELEC.
 
-##Installing Docker on CoreELEC 
+##Installing or Updating Docker on CoreELEC 
 
-To install it you have to use the download file from [releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases).
+**Important: docker-coreelec (this project) is NOT compatilble with Kodi add-on Docker. If you're using Kodi add-on Docker please remove-it before installing docker-coreelec**
 
-Considering you are using the file name "docker_v20.10.6.m_coreelec_arm64.tar.gz":
+To install it you have to use the download package from [releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases).
 
-- Send the file "docker_v20.10.6.m_coreelec_arm64.tar.gz" to device.
-- Access the device via SSH.
+Considering you are using the package name "docker\_v20.10.6.m\_coreelec\_arm64.tar.gz":
+
+- Send the package "docker_v20.10.6.m_coreelec_arm64.tar.gz" to device.
+- Access the device via SSH and type:
 
 ```bash
 cd /
-# considering you file is on /storage
+# considering that your package is on /storage
 tar zxvf /storage/docker_v20.10.6.m_coreelec_arm64.tar.gz
 systemctl daemon-reload
 systemctl start service.system.docker
