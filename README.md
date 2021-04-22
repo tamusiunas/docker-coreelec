@@ -9,10 +9,10 @@ Generally boxes sold with the Amlogic processors line have reasonably high memor
 
 This project provides structure to install the Docker version 20.10, latest (fetched directly from Github), on these devices.
 
-##Compilation instructions (Linux X86_64/arm64 and macOS)
+## Compilation instructions (Linux X86_64/arm64 and macOS)
 **Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).**
 
-###First step: know the device architecture with CoreELEC
+### First step: know the device architecture with CoreELEC
 - Enable ssh via Kodi / CoreELEC interface on the device
 - Access the device via SSH
 - Look for the architecture with the uname command:
@@ -21,7 +21,7 @@ This project provides structure to install the Docker version 20.10, latest (fet
 # uname -m
 ```
 
-####Output table
+#### Output table
 
 Output contains |Architecture is
 ------|------------
@@ -29,7 +29,7 @@ aarch64|arm64
 arm7   |arm7
 arm6   |arm6
 
-###Second step: compile it on a platform with docker installed and running
+### Second step: compile it on a platform with docker installed and running
 
 To compile for the same platform
 
@@ -48,7 +48,7 @@ To compile on different platform (<arch> is the architecture: arm64, arm7 or arm
 
 When finished a file (.tar.gz) starting with **docker_v20.10** identified by architecture and date will be available locally. Use it to install Docker on CoreELEC.
 
-##Installing or Updating Docker on CoreELEC 
+## Installing or Updating Docker on CoreELEC 
 
 **Important: docker-coreelec (this project) is NOT compatilble with Kodi add-on Docker. If you're using Kodi add-on Docker please remove-it before installing docker-coreelec**
 
