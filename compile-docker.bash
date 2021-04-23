@@ -41,6 +41,11 @@ if [ -z "${arch_uname##*aarch64*}" ]; then
   ARCH_TAR="arm64"
   BUILDX_SUFFIX="linux-arm64"
   CTOP_SUFFIX="linux-arm64"
+elif [ -z "${arch_uname##*hf*}" ]; then
+  ARCH="linux/arm/v7"
+  ARCH_TAR="armv7"
+  BUILDX_SUFFIX="linux-arm-v7"
+  CTOP_SUFFIX="linux-arm"
 elif [ -z "${arch_uname##*v7*}" ]; then
   ARCH="linux/arm/v7"
   ARCH_TAR="armv7"
