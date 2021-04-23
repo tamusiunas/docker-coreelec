@@ -68,6 +68,7 @@ cd /
 # considering that your package is on /storage
 tar zxvf /storage/docker_v20.10.6.m_coreelec_arm64.tar.gz
 systemctl daemon-reload
+systemctl enable service.system.docker.service  
 systemctl restart service.system.docker
 # if you wanna have docker commands on PATH (recommended)
 echo "export PATH=/storage/.docker/bin:$PATH" >> /storage/.profile
