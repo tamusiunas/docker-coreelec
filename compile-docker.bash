@@ -149,8 +149,9 @@ mkdir -p storage/.docker/bin storage/.docker/cli-plugins storage/.docker/data-ro
 # Download from github
 #
 
-wget -q https://github.com/docker/buildx/releases/download/v0.5.1/$BUILDX_PREFIX$BUILDX_SUFFIX -O ./storage/.docker/cli-plugins/buildx && chmod a+x ./storage/.docker/cli-plugins/buildx
-wget -q https://github.com/bcicen/ctop/releases/download/v0.7.5/$CTOP_PREFIX$CTOP_SUFFIX -O ./storage/.docker/bin/ctop && chmod a+x ./storage/.docker/bin/ctop
+curl -L --fail https://github.com/docker/buildx/releases/download/v0.5.1/$BUILDX_PREFIX$BUILDX_SUFFIX -o ./storage/.docker/cli-plugins/buildx && chmod a+x ./storage/.docker/cli-plugins/buildx
+curl -L --fail https://github.com/bcicen/ctop/releases/download/v0.7.5/$CTOP_PREFIX$CTOP_SUFFIX -o ./storage/.docker/bin/ctop && chmod a+x ./storage/.docker/bin/ctop
+curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o ./storage/.docker/bin/docker-compose && chmod a+x ./storage/.docker/bin/docker-compose
 cd build_tmp
 git clone https://github.com/moby/moby.git
 cd moby && git checkout -t origin/20.10 && cd ..
