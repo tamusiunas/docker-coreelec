@@ -30,7 +30,7 @@ This project provides structure to install the Docker version 20.10, latest (fet
 Output contains |Architecture is
 ------|------------
 aarch64|arm64
-arm7   |arm7
+armhf or arm7   |arm7
 arm6   |arm6
 
 ### Second step: compile it on a platform with docker installed and running
