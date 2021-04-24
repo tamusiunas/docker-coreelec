@@ -13,6 +13,17 @@ This project provides structure to install the Docker version 20.10, latest (fet
 
 [Download releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases)
 
+## Installation (easy way)
+
+- Enable ssh via Kodi / CoreELEC interface on the device
+- Access the device via SSH
+
+```bash
+curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash > \
+  auto-install-docker-coreelec.bash
+bash ./auto-install-docker-coreelec.bash
+```
+
 ## Compilation instructions (Linux X86_64/arm64 and macOS)
 **Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).**
 
@@ -30,8 +41,8 @@ This project provides structure to install the Docker version 20.10, latest (fet
 Output contains |Architecture is
 ------|------------
 aarch64|arm64
-armhf or arm7   |arm7
-arm6   |arm6
+armhf or armv7   |arm7
+armv6   |arm6
 
 ### Second step: compile it on a platform with docker installed and running
 

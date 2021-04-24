@@ -52,7 +52,7 @@ fi
 
 echo ""
 echo "DOCKER_URL: ${DOCKER_URL}"
-echo "Downloading docker. It can take a while."
+echo "Downloading docker. This may take a while."
 echo ""
 curl -L --fail ${DOCKER_URL} -o /storage/${DOCKER_FILE}
 cd /
@@ -62,6 +62,7 @@ echo ""
 tar zxvf /storage/${DOCKER_FILE}
 echo ""
 echo "Configuring dockerd service"
+echo "This may take a while"
 echo ""
 systemctl daemon-reload
 systemctl enable service.system.docker.service  
