@@ -111,3 +111,9 @@ rootlesskit | [moby](https://github.com/moby/moby)
 rootlesskit-docker-proxy | [moby](https://github.com/moby/moby)
 runc | [moby](https://github.com/moby/moby)
 vpnkit (arm64 only) | [moby](https://github.com/moby/moby)
+
+## Files (binaries) installed on /storage/.docker/cli-plugins
+
+File | Source (github)
+-----|-------
+docker-buildx | [buildx](https://github.com/docker/buildx)

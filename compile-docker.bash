@@ -149,7 +149,7 @@ mkdir -p storage/.docker/bin storage/.docker/cli-plugins storage/.docker/data-ro
 # Download from github
 #
 
-curl -L --fail https://github.com/docker/buildx/releases/download/v0.5.1/$BUILDX_PREFIX$BUILDX_SUFFIX -o ./storage/.docker/cli-plugins/buildx && chmod a+x ./storage/.docker/cli-plugins/buildx
+curl -L --fail https://github.com/docker/buildx/releases/download/v0.5.1/$BUILDX_PREFIX$BUILDX_SUFFIX -o ./storage/.docker/cli-plugins/docker-buildx && chmod a+x ./storage/.docker/cli-plugins/docker-buildx
 curl -L --fail https://github.com/bcicen/ctop/releases/download/v0.7.5/$CTOP_PREFIX$CTOP_SUFFIX -o ./storage/.docker/bin/ctop && chmod a+x ./storage/.docker/bin/ctop
 curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o ./storage/.docker/bin/docker-compose && chmod a+x ./storage/.docker/bin/docker-compose
 cd build_tmp
