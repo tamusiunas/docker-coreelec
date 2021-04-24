@@ -74,9 +74,8 @@ rm /storage/${DOCKER_FILE}
 echo ""
 echo "Configuring PATH"
 echo ""
-grep "PATH=/storage/.docker/bin" /storage/.profile
-retval=$?
-if [ $retval -eq 1 ]; then
+path_found=$(grep "PATH=/storage/.docker/bin" /storage/.profile 2>/dev/null)
+if [ "$path_found" == "" ]; then
   echo "export PATH=/storage/.docker/bin:\$PATH" >> /storage/.profile
   echo "docker PATH added to /storage/.profile"
 fi
@@ -84,3 +83,4 @@ echo ""
 echo "Installation is finished."
 echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec" 
 echo ""
+
