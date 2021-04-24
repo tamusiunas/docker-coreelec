@@ -79,8 +79,11 @@ if [ "$path_found" == "" ]; then
   echo "export PATH=/storage/.docker/bin:\$PATH" >> /storage/.profile
   echo "docker PATH added to /storage/.profile"
 fi
+echo ""           
+echo "Installation is almost finished. You have to reboot the system now to finish it."
+echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec"
 echo ""
-echo "Installation is finished."
-echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec" 
-echo ""
-
+read -p "Do you want to reboot the system now [y/N]? " choise
+if [ "$choise" == "y" -o "$choise" == "Y" ]; then
+  shutdown -r now
+fi
