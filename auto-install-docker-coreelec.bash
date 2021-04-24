@@ -21,7 +21,7 @@ DOCKER_URL="https://github.com/fabriciotamusiunas/docker-coreelec/releases/downl
 
 if [ -f "/storage/.kodi/addons/service.system.docker/bin/dockerd" ]; then
   echo ""
-  read -p "Docker installed via kodi addon. Do you want to remove it and install corelec-docker 20.10 [y/N]? " choise
+  read -p "Found a Docker package installed via kodi addon. Do you want to remove it and install corelec-docker 20.10 [y/N]? " choise
   if [ "$choise" == "y" -o "$choise" == "Y" ]; then
       echo ""
       echo "Uninstalling Docker addon"
@@ -74,9 +74,8 @@ rm /storage/${DOCKER_FILE}
 echo ""
 echo "Configuring PATH"
 echo ""
-grep "PATH=/storage/.docker/bin" /storage/.profile
-retval=$?
-if [ $retval -eq 1 ]; then
+path_found=$(grep "PATH=/storage/.docker/bin" /storage/.profile 2>/dev/null)
+if [ "$path_found" == "" ]; then
   echo "export PATH=/storage/.docker/bin:\$PATH" >> /storage/.profile
   echo "docker PATH added to /storage/.profile"
 fi
@@ -84,3 +83,4 @@ echo ""
 echo "Installation is finished."
 echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec" 
 echo ""
+
