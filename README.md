@@ -71,7 +71,7 @@ systemctl daemon-reload
 systemctl enable service.system.docker.service  
 systemctl restart service.system.docker
 # if you wanna have docker commands on PATH (recommended)
-echo "export PATH=/storage/.docker/bin:$PATH" >> /storage/.profile
+echo "export PATH=/storage/.docker/bin:\$PATH" >> /storage/.profile
 ```
 
 All docker executable files are at "/storage/.docker/bin". 
