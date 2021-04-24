@@ -1,7 +1,8 @@
 #!/bin/bash
 
-DOCKER_VERSION="20.10.6.m"
-DOCKER_DATE="20210423000000"
+DOCKER_TAG="v20.10.6"
+DOCKER_VERSION="v20.10.6-2-g4af54f15ed.m"
+DOCKER_DATE="20210424000000"
 
 arch_uname=$(uname -m)
 if [ -z "${arch_uname##*aarch64*}" ]; then
@@ -17,8 +18,8 @@ else
   exit 1
 fi
 
-DOCKER_FILE="docker_v${DOCKER_VERSION}_coreelec_${ARCH_TAR}_${DOCKER_DATE}.tar.gz" 
-DOCKER_URL="https://github.com/fabriciotamusiunas/docker-coreelec/releases/download/${DOCKER_VERSION}/${DOCKER_FILE}"
+DOCKER_FILE="docker_${DOCKER_VERSION}_coreelec_${ARCH_TAR}_${DOCKER_DATE}.tar.gz" 
+DOCKER_URL="https://github.com/fabriciotamusiunas/docker-coreelec/releases/download/${DOCKER_TAG}/${DOCKER_FILE}"
 
 if [ -f "/storage/.kodi/addons/service.system.docker/bin/dockerd" ]; then
   echo ""
