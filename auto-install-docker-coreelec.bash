@@ -14,6 +14,7 @@ elif [ -z "${arch_uname##*v6*}" ]; then
   ARCH_TAR="armv6"
 else
   echo "Architecture $arch_uname not supported"
+  exit 1
 fi
 
 DOCKER_FILE="docker_v${DOCKER_VERSION}_coreelec_${ARCH_TAR}_${DOCKER_DATE}.tar.gz" 
