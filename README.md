@@ -90,3 +90,24 @@ All docker executable files are at "/storage/.docker/bin".
 The daemon.config file is at "/storage/.config/docker/daemon.json"
 
 The data-root directory is "/storage/.docker/data-root"
+
+## Files (binaries) installed on /storage/.docker/bin
+
+File | Source (github)
+-----|-------
+containerd | [moby](https://github.com/moby/moby)
+containerd-shim | [moby](https://github.com/moby/moby)
+containerd-shim-runc-v2 | [moby](https://github.com/moby/moby)
+ctop | [ctop](https://github.com/bcicen/ctop)
+ctr | [moby](https://github.com/moby/moby)
+docker | [docker-cli](https://github.com/docker/cli)
+docker-compose | [linuxserver](https://github.com/linuxserver/docker-docker-compose)
+docker-init | [moby](https://github.com/moby/moby)
+docker-proxy | [moby](https://github.com/moby/moby)
+dockerd | [moby](https://github.com/moby/moby)
+dockerd-rootless-setuptool.sh | [moby](https://github.com/moby/moby)
+dockerd-rootless.sh | [moby](https://github.com/moby/moby)
+rootlesskit | [moby](https://github.com/moby/moby)
+rootlesskit-docker-proxy | [moby](https://github.com/moby/moby)
+runc | [moby](https://github.com/moby/moby)
+vpnkit (arm64 only) | [moby](https://github.com/moby/moby)
