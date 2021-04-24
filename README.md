@@ -24,7 +24,7 @@ curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/a
 bash ./auto-install-docker-coreelec.bash
 ```
 
-## Compilation instructions (Linux X86_64/arm64 and macOS)
+## Compilation instructions (using Linux x86_64/arm64 or macOS)
 **Note: If you're compiling it on a platform with a different target architecture, you have to use cross-compiling (buildx).**
 
 ### First step: know the device architecture with CoreELEC
