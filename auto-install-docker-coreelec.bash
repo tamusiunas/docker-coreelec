@@ -21,7 +21,7 @@ DOCKER_URL="https://github.com/fabriciotamusiunas/docker-coreelec/releases/downl
 
 if [ -f "/storage/.kodi/addons/service.system.docker/bin/dockerd" ]; then
   echo ""
-  read -p "Docker installed via kodi addon. Do you want to remove it and install corelec-docker 20.10 [y/N]? " choise
+  read -p "Found a Docker package installed via kodi addon. Do you want to remove it and install corelec-docker 20.10 [y/N]? " choise
   if [ "$choise" == "y" -o "$choise" == "Y" ]; then
       echo ""
       echo "Uninstalling Docker addon"
