@@ -19,7 +19,7 @@ else
 fi
 
 DOCKER_FILE="docker_${DOCKER_VERSION}_coreelec_${ARCH_TAR}_${DOCKER_DATE}.tar.gz" 
-DOCKER_URL="https://github.com/fabriciotamusiunas/docker-coreelec/releases/download/${DOCKER_TAG}/${DOCKER_FILE}"
+DOCKER_URL="https://github.com/tamusiunas/docker-coreelec/releases/download/${DOCKER_TAG}/${DOCKER_FILE}"
 
 if [ -f "/storage/.kodi/addons/service.system.docker/bin/dockerd" ]; then
   echo ""
@@ -84,7 +84,7 @@ if [ "$path_found" == "" ]; then
 fi
 echo ""           
 echo "Installation is almost finished. You have to reboot the system now to finish it."
-echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec"
+echo "For more information about the package visit https://github.com/tamusiunas/docker-coreelec"
 echo ""
 if [ "$1" == "noshutdown" ]; then
   exit 0
