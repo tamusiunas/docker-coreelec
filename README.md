@@ -71,7 +71,7 @@ When finished a file (.tar.gz) starting with **docker_v20.10** identified by arc
 
 **Important: docker-coreelec (this project) is NOT compatilble with Kodi add-on Docker. If you're using Kodi add-on Docker please remove-it before installing docker-coreelec**
 
-To install it you have to use the download package from [releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases).
+To install it you have to use the download package from [releases](https://github.com/tamusiunas/docker-coreelec/releases).
 
 Considering you are using the package name "docker\_v20.10.6.m_coreelec\_arm64\_20210422000000.tar.gz":
 
