@@ -86,6 +86,9 @@ echo ""
 echo "Installation is almost finished. You have to reboot the system now to finish it."
 echo "For more information about the package visit https://github.com/fabriciotamusiunas/docker-coreelec"
 echo ""
+if [ "$1" == "noshutdown" ]; then
+  exit 0
+fi
 read -p "Do you want to reboot the system now [y/N]? " choise
 if [ "$choise" == "y" -o "$choise" == "Y" ]; then
   shutdown -r now
