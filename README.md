@@ -11,7 +11,7 @@ This project provides structure to install the Docker version 20.10, latest (fet
 
 ## Download releases
 
-[Download releases](https://github.com/fabriciotamusiunas/docker-coreelec/releases)
+[Download releases](https://github.com/tamusiunas/docker-coreelec/releases)
 
 ## Installation (easy way)
 
