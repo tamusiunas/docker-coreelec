@@ -51,7 +51,7 @@ To compile for the same platform
 ```bash
 git clone https://github.com/tamusiunas/docker-coreelec.git
 cd docker-coreelec
-./compile-docker.bash buid
+./compile-docker.bash build
 ```
 
 To compile on different platform (<arch> is the architecture: arm64, arm7 or arm6)
@@ -60,7 +60,7 @@ To compile on different platform (<arch> is the architecture: arm64, arm7 or arm
 git clone https://github.com/tamusiunas/docker-coreelec.git
 cd docker-coreelec
 ./compile-docker.bash buidx -a <arch>
-# example: ./compile-docker.bash buidx -a arm64
+# example: ./compile-docker.bash buildx -a arm64
 ```
 
 **Depending on your system performance the compilation can take up to 30 minutes.**
