@@ -19,7 +19,7 @@ This project provides structure to install the Docker version 20.10, latest (fet
 - Access the device via SSH
 
 ```bash
-curl https://raw.githubusercontent.com/fabriciotamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash > \
+curl https://raw.githubusercontent.com/tamusiunas/docker-coreelec/main/auto-install-docker-coreelec.bash > \
   auto-install-docker-coreelec.bash
 bash ./auto-install-docker-coreelec.bash
 ```
@@ -49,12 +49,16 @@ armv6   |arm6
 To compile for the same platform
 
 ```bash
+git clone https://github.com/tamusiunas/docker-coreelec.git
+cd docker-coreelec
 ./compile-docker.bash buid
 ```
 
 To compile on different platform (<arch> is the architecture: arm64, arm7 or arm6)
 
 ```bash
+git clone https://github.com/tamusiunas/docker-coreelec.git
+cd docker-coreelec
 ./compile-docker.bash buidx -a <arch>
 # example: ./compile-docker.bash buidx -a arm64
 ```
