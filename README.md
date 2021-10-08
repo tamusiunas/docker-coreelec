@@ -59,7 +59,7 @@ To compile on different platform (<arch> is the architecture: arm64, arm7 or arm
 ```bash
 git clone https://github.com/tamusiunas/docker-coreelec.git
 cd docker-coreelec
-./compile-docker.bash buidx -a <arch>
+./compile-docker.bash buildx -a <arch>
 # example: ./compile-docker.bash buildx -a arm64
 ```
 
