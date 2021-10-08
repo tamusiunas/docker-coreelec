@@ -81,7 +81,7 @@ Considering you are using the package name "docker\_v20.10.6.m_coreelec\_arm64\_
 ```bash
 cd /
 # considering that your package is on /storage
-tar zxvf /storage/docker_v20.10.6.m_coreelec_arm64.tar.gz
+tar zxvf /storage/docker\_v20.10.6.m_coreelec\_arm64\_20210422000000.tar.gz
 systemctl daemon-reload
 systemctl enable service.system.docker.service  
 systemctl restart service.system.docker
