@@ -2,7 +2,7 @@
 
 DOCKER_TAG="v20.10.16"
 DOCKER_VERSION="v20.10.16-4-g4d718932c1.m"
-DOCKER_DATE="20211008193408"
+DOCKER_DATE="20220606183323"
 
 arch_uname=$(uname -m)
 if [ -z "${arch_uname##*aarch64*}" ]; then
