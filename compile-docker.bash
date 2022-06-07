@@ -149,12 +149,12 @@ mkdir -p storage/.docker/bin storage/.docker/cli-plugins storage/.docker/data-ro
 # Download from github
 #
 
-curl -L --fail https://github.com/docker/buildx/releases/download/v0.5.1/$BUILDX_PREFIX$BUILDX_SUFFIX -o ./storage/.docker/cli-plugins/docker-buildx && chmod a+x ./storage/.docker/cli-plugins/docker-buildx
-curl -L --fail https://github.com/bcicen/ctop/releases/download/v0.7.5/$CTOP_PREFIX$CTOP_SUFFIX -o ./storage/.docker/bin/ctop && chmod a+x ./storage/.docker/bin/ctop
+curl -L --fail https://github.com/docker/buildx/releases/download/v0.8.2/$BUILDX_PREFIX$BUILDX_SUFFIX -o ./storage/.docker/cli-plugins/docker-buildx && chmod a+x ./storage/.docker/cli-plugins/docker-buildx
+curl -L --fail https://github.com/bcicen/ctop/releases/download/v0.7.7/$CTOP_PREFIX$CTOP_SUFFIX -o ./storage/.docker/bin/ctop && chmod a+x ./storage/.docker/bin/ctop
 curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o ./storage/.docker/bin/docker-compose && chmod a+x ./storage/.docker/bin/docker-compose
 cd build_tmp
 git clone https://github.com/moby/moby.git
-cd moby && git checkout -t origin/20.10 && cd ..
+cd moby && git checkout -t origin/20.10 && git checkout 4734f1e8c97218ad8b827fb5e562b8cdd593525b && cd ..
 patch -p0 < ../patch/patch_daemon_unix_go.patch
 git clone https://github.com/docker/cli.git
 cd cli && git checkout -t origin/20.10 && cd ..
