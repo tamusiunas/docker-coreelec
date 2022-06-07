@@ -73,15 +73,15 @@ When finished a file (.tar.gz) starting with **docker_v20.10** identified by arc
 
 To install it you have to use the download package from [releases](https://github.com/tamusiunas/docker-coreelec/releases).
 
-Considering you are using the package name "docker\_v20.10.6.m_coreelec\_arm64\_20210422000000.tar.gz":
+Considering you are using the package name "docker\_v20.10.16-4-g4d718932c1.m_coreelec\_arm64\_20220606183323.tar.gz"
 
-- Send the package "docker\_v20.10.6.m_coreelec\_arm64\_20210422000000.tar.gz" to device.
+- Send the package "docker\_v20.10.16-4-g4d718932c1.m_coreelec\_arm64\_20220606183323.tar.gz" to device.
 - Access the device via SSH and type:
 
 ```bash
 cd /
 # considering that your package is on /storage
-tar zxvf /storage/docker_v20.10.6.m_coreelec_arm64_20210422000000.tar.gz
+tar zxvf /storage/docker_v20.10.16-4-g4d718932c1.m_coreelec_arm64_20220606183323.tar.gz
 systemctl daemon-reload
 systemctl enable service.system.docker.service  
 systemctl restart service.system.docker
