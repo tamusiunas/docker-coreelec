@@ -1,13 +1,12 @@
 --- moby_corelec/cmd/dockerd/daemon_unix.go
 +++ moby/cmd/dockerd/daemon_unix.go
-@@ -25,7 +25,9 @@
+@@ -24,7 +24,8 @@
  
  func getDefaultDaemonConfigDir() (string, error) {
  	if !honorXDG {
 -		return "/etc/docker", nil
 +//		return "/etc/docker", nil
 +		return "/storage/.config/docker/etc", nil
-+
  	}
  	// NOTE: CLI uses ~/.docker while the daemon uses ~/.config/docker, because
  	// ~/.docker was not designed to store daemon configurations.
