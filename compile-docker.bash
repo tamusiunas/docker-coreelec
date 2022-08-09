@@ -154,10 +154,11 @@ curl -L --fail https://github.com/bcicen/ctop/releases/download/v0.7.7/$CTOP_PRE
 curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o ./storage/.docker/bin/docker-compose && chmod a+x ./storage/.docker/bin/docker-compose
 cd build_tmp
 git clone https://github.com/moby/moby.git
-cd moby && git checkout -t origin/20.10 && git checkout 4734f1e8c97218ad8b827fb5e562b8cdd593525b && cd ..
+cd moby && git checkout -t origin/22.06 && git checkout ec89e7cde1ff1bcbd9b09f9139c770d6dde7ffcb && cd ..
 patch -p0 < ../patch/patch_daemon_unix_go.patch
 git clone https://github.com/docker/cli.git
-cd cli && git checkout -t origin/20.10 && cd ..
+# cd cli && git checkout -t origin/20.10 && cd ..
+cd cli && git checkout e1f24d3c93df6752d3c27c8d61d18260f141310c && cd ..
 if [ "$BUILD_METHOD" == "buildx" ]; then
   cd moby
   MOBY_VERSION=$(git describe --match 'v[0-9]*' --dirty='.m' --always --tags)
@@ -173,7 +174,7 @@ else
   VERSION="$(git describe --match 'v[0-9]*' --dirty='.m' --always --tags)" docker buildx bake
   cd ../..
 fi
-cp -p build_tmp/moby/bundles/binary-daemon/{containerd,containerd-shim,containerd-shim-runc-v2,ctr,docker-init,docker-proxy,dockerd,dockerd-rootless-setuptool.sh,dockerd-rootless.sh,rootlesskit,rootlesskit-docker-proxy,runc,vpnkit} ./storage/.docker/bin
+cp -p build_tmp/moby/bundles/binary-daemon/{containerd,containerd-shim-runc-v2,ctr,docker-init,docker-proxy,dockerd,dockerd-rootless-setuptool.sh,dockerd-rootless.sh,rootlesskit,rootlesskit-docker-proxy,runc,vpnkit} ./storage/.docker/bin
 cp -p build_tmp/cli/build/docker* ./storage/.docker/bin
 TIME_NOW=$(date +"%Y%m%d%H%M%S")
 tar zcvf docker_${MOBY_VERSION}_coreelec_${ARCH_TAR}_${TIME_NOW}.tar.gz storage
