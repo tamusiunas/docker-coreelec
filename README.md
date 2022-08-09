@@ -1,5 +1,5 @@
 # docker-coreelec
-Docker 20.10 for CoreELEC distro
+Docker 22.06 for CoreELEC distro
 
 CoreELEC is a Linux system (JeOS - Just enough Operational System) that runs on devices with Amlogic processors. It has the minimum required to run the Kodi system and uses the original Amlogic Kernel for Android (4.9.113) having support for almost all embedded devices (Bluetooth, WiFi, Ethernet, Audio and Video Output, Hardware Video Decoding) using the original Android structure while other Linux distributions often do not support all installed devices.
 
@@ -7,7 +7,7 @@ Usually new software is installed through add-on using the GUI interface (Kodi),
 
 Generally boxes sold with the Amlogic processors line have reasonably high memory for this type of system (4/8 GB) and multi-core processor with a very attractive price. The possibility of using a docker, especially the latest versions with security fixes, can make this type of equipment very efficient for a lot of domestic applications, such as servers for IoT.
 
-This project provides structure to install the Docker version 20.10, latest (fetched directly from Github), on these devices.
+This project provides structure to install the Docker version 22.06, latest (fetched directly from Github), on these devices.
 
 ## Download releases
 
@@ -65,7 +65,7 @@ cd docker-coreelec
 
 **Depending on your system performance the compilation can take up to 30 minutes.**
 
-When finished a file (.tar.gz) starting with **docker_v20.10** identified by architecture and date will be available locally. Use it to install Docker on CoreELEC.
+When finished a file (.tar.gz) starting with **docker_v22.06** identified by architecture and date will be available locally. Use it to install Docker on CoreELEC.
 
 ## Installing or Updating Docker on CoreELEC 
 
@@ -73,15 +73,15 @@ When finished a file (.tar.gz) starting with **docker_v20.10** identified by arc
 
 To install it you have to use the download package from [releases](https://github.com/tamusiunas/docker-coreelec/releases).
 
-Considering you are using the package name "docker\_v20.10.16-4-g4d718932c1.m_coreelec\_arm64\_20220606183323.tar.gz"
+Considering you are using the package name "docker\_v22.06.0-beta.0-167-gec89e7cde1.m\_coreelec\_arm64\_20220808205438.tar.gz"
 
-- Send the package "docker\_v20.10.16-4-g4d718932c1.m_coreelec\_arm64\_20220606183323.tar.gz" to device.
+- Send the package "docker\_v22.06.0-beta.0-167-gec89e7cde1.m\_coreelec\_arm64\_20220808205438.tar.gz" to device.
 - Access the device via SSH and type:
 
 ```bash
 cd /
 # considering that your package is on /storage
-tar zxvf /storage/docker_v20.10.16-4-g4d718932c1.m_coreelec_arm64_20220606183323.tar.gz
+tar zxvf /storage/docker_v22.06.0-beta.0-167-gec89e7cde1.m_coreelec_arm64_20220808205438.tar.gz
 systemctl daemon-reload
 systemctl enable service.system.docker.service  
 systemctl restart service.system.docker
@@ -100,7 +100,6 @@ The data-root directory is "/storage/.docker/data-root"
 File | Source (github)
 -----|-------
 containerd | [moby](https://github.com/moby/moby)
-containerd-shim | [moby](https://github.com/moby/moby)
 containerd-shim-runc-v2 | [moby](https://github.com/moby/moby)
 ctop | [ctop](https://github.com/bcicen/ctop)
 ctr | [moby](https://github.com/moby/moby)
