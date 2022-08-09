@@ -1,8 +1,8 @@
 #!/bin/bash
 
-DOCKER_TAG="v20.10.16"
-DOCKER_VERSION="v20.10.16-4-g4d718932c1.m"
-DOCKER_DATE="20220606183323"
+DOCKER_TAG="v22.06.0"
+DOCKER_VERSION="v22.06.0-beta.0-167-gec89e7cde1.m"
+DOCKER_DATE="20220808205438"
 
 arch_uname=$(uname -m)
 if [ -z "${arch_uname##*aarch64*}" ]; then
@@ -23,7 +23,7 @@ DOCKER_URL="https://github.com/tamusiunas/docker-coreelec/releases/download/${DO
 
 if [ -f "/storage/.kodi/addons/service.system.docker/bin/dockerd" ]; then
   echo ""
-  read -p "Found a Docker package installed via kodi addon. Do you want to remove it and install corelec-docker 20.10 [y/N]? " choise
+  read -p "Found a Docker package installed via kodi addon. Do you want to remove it and install corelec-docker 22.06 [y/N]? " choise
   if [ "$choise" == "y" -o "$choise" == "Y" ]; then
       echo ""
       echo "Uninstalling Docker addon"
