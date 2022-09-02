@@ -8,7 +8,7 @@ Type=idle
 Environment=PATH=/storage/.docker/bin:/opt/bin:/opt/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 ExecStart=/storage/.docker/bin/dockerd --config-file /storage/.config/docker/daemon.json
 TimeoutStartSec=0
-Restart=on-abnormal
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
